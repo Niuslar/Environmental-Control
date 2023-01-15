@@ -6,12 +6,6 @@
  */
 
 #include "main.h"
-#include "FreeRTOS.h"
-#include "CThermistor.h"
-#include "queue.h"
-
-CThermistor thermistor1;
-extern QueueHandle_t commandsIn;
 
 #ifdef __cplusplus
 extern "C"

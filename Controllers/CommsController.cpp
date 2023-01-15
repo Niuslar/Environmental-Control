@@ -6,10 +6,6 @@
  */
 
 #include "main.h"
-#include "FreeRTOS.h"
-#include "queue.h"
-
-extern QueueHandle_t commandsOut;
 
 #ifdef __cplusplus
 extern "C"
