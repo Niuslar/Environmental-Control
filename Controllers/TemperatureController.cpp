@@ -25,7 +25,7 @@ void TemperatureControllerInit()
 
 void TemperatureControllerRun()
 {
-	thermistor1.ReadTemp();
+
 }
 
 #ifdef __cplusplus
