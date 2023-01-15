@@ -34,6 +34,7 @@
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.option.includepaths.1685524357" name="Include paths (-I)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.option.includepaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.1261653331" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -56,6 +57,7 @@
 									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1521421349" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -79,6 +81,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib/Inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.296672903" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
@@ -102,10 +105,10 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Controllers"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Lib"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Lib"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -141,6 +144,10 @@
 								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.option.includepaths.324974154" name="Include paths (-I)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.option.includepaths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.1998070043" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -162,6 +169,10 @@
 									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.2117962936" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -183,6 +194,10 @@
 									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.107174020" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
