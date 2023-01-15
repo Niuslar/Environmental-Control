@@ -9,6 +9,7 @@
 #define CTHERMISTOR_H_
 
 #include "main.h"
+extern uint16_t delayInMs;
 
 class CThermistor {
 public:

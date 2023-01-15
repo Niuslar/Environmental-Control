@@ -1,5 +1,5 @@
 /*
- * TemperatureController.cpp
+ * HumidityController.cpp
  *
  *  Created on: Jan 14, 2023
  *      Author: Niuslar
@@ -7,29 +7,25 @@
 
 #include "main.h"
 #include "FreeRTOS.h"
-#include "CThermistor.h"
 #include "queue.h"
 
-CThermistor thermistor1;
-extern QueueHandle_t commandsIn;
+extern QueueHandle_t commandsOut;
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
 
-void TemperatureControllerInit()
+void HumidityControllerInit()
 {
 
 }
 
-void TemperatureControllerRun()
+void HumidityControllerRun()
 {
-	thermistor1.ReadTemp();
 }
 
 #ifdef __cplusplus
 }
 #endif
-
 
