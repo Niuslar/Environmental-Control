@@ -18,7 +18,7 @@ CTaskBase::CTaskBase(const etl::string<configMAX_TASK_NAME_LEN> name,
 
 CTaskBase::~CTaskBase()
 {
-    // TODO Auto-generated destructor stub
+    // TODO: ErrorHandler("Task deleted unexpectedly.");
 }
 
 bool CTaskBase::start()
@@ -47,7 +47,5 @@ void CTaskBase::taskRunner(void *p_param)
 {
     CTaskBase *p_task = static_cast<CTaskBase *>(p_param);
     p_task->run();
-    // TODO: this call should never return, thus here it the best place to catch
-    // task that exits. If task deletion is ever allowed, then here is the place
-    // to do clean up.
+    // TODO: ErrorHanlder("Task returned from runner unexpectedly.");
 }

@@ -1,4 +1,5 @@
 *.mxproject
 Environmental-Control.launch
 .settings/*
-Debug/*
+/Debug/
+/Release/
