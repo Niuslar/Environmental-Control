@@ -1,0 +1,29 @@
+@startuml System architecture
+class CDispatcher
+abstract class IComChannel
+class CUartCom
+abstract class CTaskBase
+abstract class ICommand
+class CController
+
+class CHumidityControl
+class CTemperatureControl
+class CCO2Control
+
+entity CommandQueue
+
+CController <|-- CTaskBase : implement
+CDispatcher <|-- CTaskBase : implement
+CHumidityControl <|-- CController : implement
+CTemperatureControl <|-- CController : implement
+CCO2Control <|-- CController : implement
+CUartCom <|-- IComChannel : implement
+
+CUartCom -- CDispatcher : Rx/Tx
+CDispatcher -- CHumidityControl : command/response
+CDispatcher -- CTemperatureControl : command/response
+CDispatcher -- CCO2Control: command/response
+
+CommandQueue "1" *- "many" ICommand : contains
+CDispatcher "1" *- "1" CommandQueue : contains
+@enduml
