@@ -7,14 +7,27 @@
 
 #include "CController.h"
 
-CController::CController(const etl::string<configMAX_TASK_NAME_LEN> name,
-                         uint16_t stack_depth,
-                         UBaseType_t priority)
-    : CTaskBase(name, stack_depth, priority)
+CController::CController(uint32_t run_period,
+                         const etl::string<configMAX_TASK_NAME_LEN> name,
+                         uint32_t stack_depth,
+                         osPriority_t priority)
+    : CTaskBase(name, stack_depth, priority),
+      m_run_period(run_period),
+      mp_command_queue(NULL)
 {
 }
 
 CController::~CController()
 {
     // Destruction of CController will trigger error handler in CTaskBase.
+}
+
+void CController::run()
+{
+    while (true)
+    {
+        processControl();
+        processCommand();
+        osDelayUntil(m_run_period);
+    }
 }
