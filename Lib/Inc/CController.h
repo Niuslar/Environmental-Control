@@ -9,6 +9,7 @@
 #define CCONTROLLER_H_
 
 #include "CTaskBase.h"
+#include "CMessage.h"
 #include "cmsis_os2.h"
 
 class CController : public CTaskBase
@@ -22,12 +23,9 @@ public:
 
     virtual void run();
 
-    void setCommandQueue(osMessageQueueId_t *p_queue)
+    const osMessageQueueId_t getCommandQueue() const
     {
-        if (p_queue != NULL)
-        {
-            mp_command_queue = p_queue;
-        }
+        return (m_command_queue);
     }
 
 protected:
@@ -38,7 +36,7 @@ private:
     // TODO: does each controller own the command or do we have one queue
     // and each controller has to peek the command.
     uint32_t m_run_period;
-    osMessageQueueId_t mp_command_queue;
+    osMessageQueueId_t m_command_queue;
 };
 
 #endif /* CCONTROLLER_H_ */

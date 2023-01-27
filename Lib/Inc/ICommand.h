@@ -15,7 +15,7 @@
 
 #include "etl/string.h"
 
-#define MAX_COMMAND_SIZE 100
+#define MAX_COMMAND_SIZE 20
 #if (MAX_COMMAND_SIZE > MAX_STRING_SIZE)
 #    error "Command size too big to fit into strings."
 #endif
@@ -45,7 +45,7 @@ public:
      *
      * @return Name of the last parsed command.
      */
-    virtual const etl::string<MAX_STRING_SIZE> *getName() const = 0;
+    virtual const etl::string<MAX_COMMAND_SIZE> *getName() const = 0;
 
     /**
      * @brief Get number of arguments.
@@ -59,7 +59,7 @@ public:
      *
      * @return String argument if available, empty string if not.
      */
-    virtual const etl::string<MAX_STRING_SIZE> *getStringArgument() const = 0;
+    virtual const etl::string<MAX_COMMAND_SIZE> *getStringArgument() const = 0;
 
     /**
      * @brief Access parsed arguments by index of their position in the command
@@ -68,7 +68,7 @@ public:
      * @param index Position of the argument to be accessed. Zero-based index.
      * @return Value of the argument at the requested index.
      */
-    virtual float operator[](unsigned int index) = 0;
+    virtual float &operator[](unsigned int index) = 0;
 };
 
 #endif /* CCOMMAND_H_ */
