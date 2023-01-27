@@ -8,11 +8,12 @@
 #include "CTaskBase.h"
 
 CTaskBase::CTaskBase(const etl::string<configMAX_TASK_NAME_LEN> name,
-                     uint16_t stack_depth,
-                     UBaseType_t priority)
+                     uint32_t stack_depth,
+                     osPriority_t priority)
     : m_name(name),
       m_stack_depth(stack_depth),
-      m_priority(priority)
+      m_priority(priority),
+      m_id(NULL)
 {
 }
 
@@ -23,24 +24,11 @@ CTaskBase::~CTaskBase()
 
 bool CTaskBase::start()
 {
-    BaseType_t result = xTaskCreate(taskRunner,
-                                    m_name.c_str(),
-                                    m_stack_depth,
-                                    this,
-                                    m_priority,
-                                    &m_handle);
-    return (result == pdPASS ? true : false);
-}
-
-void CTaskBase::delay(const TickType_t delay)
-{
-    vTaskDelay(delay);
-}
-
-void CTaskBase::delayUntil(TickType_t *const p_previous_wake_time,
-                           const TickType_t delay)
-{
-    vTaskDelayUntil(p_previous_wake_time, delay);
+    osThreadAttr_t attributes;
+    attributes.name = m_name.c_str();
+    attributes.priority = m_priority;
+    attributes.stack_size = m_stack_depth;
+    m_id = osThreadNew(taskRunner, this, &attributes);
 }
 
 void CTaskBase::taskRunner(void *p_param)

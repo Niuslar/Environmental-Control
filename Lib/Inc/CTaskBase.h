@@ -10,15 +10,15 @@
 
 #include "FreeRTOS.h"
 #include "FreeRTOSConfig.h"
+#include "cmsis_os2.h"
 #include "etl/string.h"
-#include "task.h"
 
 class CTaskBase
 {
 public:
     CTaskBase(const etl::string<configMAX_TASK_NAME_LEN> name,
-              uint16_t stack_depth,
-              UBaseType_t priority);
+              uint32_t stack_depth,
+			  osPriority_t priority);
     virtual ~CTaskBase();
 
     virtual void run() = 0;
@@ -27,16 +27,11 @@ public:
 
     static void taskRunner(void *p_param);
 
-protected:
-    void delay(const TickType_t delay);
-    void delayUntil(TickType_t *const p_previous_wake_time,
-                    const TickType_t delay);
-
 private:
-    TaskHandle_t m_handle;
     etl::string<configMAX_TASK_NAME_LEN> m_name;
-    const UBaseType_t m_stack_depth;
-    UBaseType_t m_priority;
+    const uint32_t m_stack_depth;
+    osPriority_t m_priority;
+    osThreadId_t m_id;
 };
 
 #endif /* CTASKBASE_H_ */
