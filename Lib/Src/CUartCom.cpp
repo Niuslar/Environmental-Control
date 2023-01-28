@@ -18,7 +18,7 @@ uint8_t CUartCom::s_uart_instances = 0;
  * @param name Name of the instance
  * @note An instance needs to be initialised using the init() method
  */
-CUartCom::CUartCom(const etl::string<MAX_STRING_SIZE> name)
+CUartCom::CUartCom(const etl::string<MAX_NAME_SIZE> name)
     : IComChannel(name),
       mp_huart(nullptr),
       m_uart_de_pin()

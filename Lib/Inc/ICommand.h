@@ -15,7 +15,7 @@
 
 #include "etl/string.h"
 
-#define MAX_COMMAND_SIZE 100
+#define MAX_COMMAND_SIZE 50
 #if (MAX_COMMAND_SIZE > MAX_STRING_SIZE)
 #    error "Command size too big to fit into strings."
 #endif

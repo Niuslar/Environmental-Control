@@ -27,7 +27,7 @@
 class CUartCom : public IComChannel
 {
 public:
-    CUartCom(const etl::string<MAX_STRING_SIZE> name);
+    CUartCom(const etl::string<MAX_NAME_SIZE> name);
 
     bool init(UART_HandleTypeDef *p_huart);
     bool init(UART_HandleTypeDef *p_huart,
