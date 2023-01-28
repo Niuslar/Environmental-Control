@@ -16,6 +16,7 @@ extern "C"
 
 extern osMessageQueueId_t messagesOutHandle;
 extern osMessageQueueId_t commandsInHandle;
+extern osEventFlagsId_t commsInOutHandle;
 
 void TemperatureControllerInit()
 {
@@ -31,6 +32,7 @@ void TemperatureControllerRun()
 	// For testing: If we get a command, we send it back
 	if(!commandIn.empty())
 	{
+		osEventFlagsSet(commsInOutHandle,2);
 		osMessageQueuePut(messagesOutHandle, &commandIn, 1, 100);
 	}
 }

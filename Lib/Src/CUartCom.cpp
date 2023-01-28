@@ -9,6 +9,9 @@
  */
 
 #include "CUartCom.h"
+#include "cmsis_os2.h"
+
+extern osEventFlagsId_t commsInOutHandle;
 
 CUartCom *CUartCom::sp_UART[MAX_UART_ENGINES] = {nullptr};
 uint8_t CUartCom::s_uart_instances = 0;
@@ -207,6 +210,10 @@ void CUartCom::uartRxHandler(UART_HandleTypeDef *p_huart)
             if (m_rx_queue.put(rx_string) == false)
             {
                 send("Error: Buffer overflow -> RX Queue\n");
+            }
+            else
+            {
+            	osEventFlagsSet(commsInOutHandle, 1);
             }
         }
     }

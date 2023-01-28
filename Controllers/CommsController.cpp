@@ -21,6 +21,7 @@ etl::string<MAX_MESSAGE_SIZE> message;
 
 extern osMessageQueueId_t messagesOutHandle;
 extern osMessageQueueId_t commandsInHandle;
+extern osEventFlagsId_t commsInOutHandle;
 
 void CommsControllerInit()
 {
@@ -45,6 +46,7 @@ void CommsControllerInit()
 
 void CommsControllerRun()
 {
+	osEventFlagsWait(commsInOutHandle, 1, osFlagsWaitAny, osWaitForever);
 	message.clear();
 
 	etl::string<MAX_STRING_SIZE> commandIn;
