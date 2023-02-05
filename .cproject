@@ -35,6 +35,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.1261653331" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -58,6 +59,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1521421349" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -81,6 +83,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib/Inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.296672903" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
@@ -103,11 +106,12 @@
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Commands"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Controllers"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Lib"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Lib"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
@@ -147,6 +151,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/etl}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/etl}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.1998070043" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -172,6 +177,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/etl}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/etl}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.2117962936" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -197,6 +203,7 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/etl}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/etl}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.107174020" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
@@ -220,8 +227,8 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Core"/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Drivers"/>
+						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="Middlewares"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>

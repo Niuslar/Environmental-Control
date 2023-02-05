@@ -22,39 +22,17 @@ constexpr uint8_t CThermistor::s_default_order = 3;
  minimum number of coefficients required is 2, which would make for a first
  order polynomial otherwise knows as linear relation.
  */
-CThermistor::CThermistor(float *p_calibration_coeff, uint8_t calibration_order)
-    : m_calibration_order(calibration_order)
+CThermistor::CThermistor(uint8_t adc_channel, CAdcData *p_adc_handler)
+    : m_adc_channel(adc_channel), mp_adc_handler(p_adc_handler)
 {
-    float const *p_coeff;
+	if(mp_adc_handler == nullptr)
+	{
+		Error_Handler();
+	}
 
-    // Check if we need to use default values
-    if ((p_calibration_coeff == nullptr) || (calibration_order == 0))
-    {
-        p_coeff = s_default_coeff;
-        m_calibration_order = s_default_order;
-    }
+	// Start with default calibration parameters
+	setCalibration();
 
-    else
-    {
-        // Check pointer
-        if (p_calibration_coeff == nullptr)
-        {
-            Error_Handler();
-        }
-
-        p_coeff = p_calibration_coeff;
-
-        // Check order
-        if (calibration_order > max_order)
-        {
-            Error_Handler();
-        }
-    }
-
-    for (int i = 0; i <= m_calibration_order; i++)
-    {
-        m_calibration_coeff[i] = p_coeff[i];
-    }
 }
 
 /**
@@ -68,9 +46,11 @@ void CThermistor::setLimits(const float min_voltage, const float max_voltage)
     m_max_volt_limit = max_voltage;
 }
 
-float CThermistor::getTemperature(float voltage) const
+float CThermistor::getTemperature() const
 {
     float temp_celsius = m_calibration_coeff[0];
+
+    float voltage = mp_adc_handler->operator [](m_adc_channel);
 
     // Check the values are within range
     if (voltage > m_min_volt_limit && voltage < m_max_volt_limit)
@@ -96,21 +76,40 @@ float CThermistor::getTemperature(float voltage) const
 void CThermistor::setCalibration(float *p_calibration_coeff,
                                  uint8_t calibration_order)
 {
-    // Check input
-    if ((p_calibration_coeff == nullptr) || (calibration_order > max_order) ||
-        (calibration_order == 0))
-    {
-        return;
-    }
+	float const *p_coeff;
 
-    // TODO: see if we need to check this loop won't try to access elements past
-    // the array
-    // e.g. p_calibration_coeff points to array of size 3 and calibration_order
-    // is 3.
-    for (uint8_t i = 0; i <= calibration_order; i++)
-    {
-        m_calibration_coeff[i] = p_calibration_coeff[i];
-    }
+	// Check if we need to use default values
+	if ((p_calibration_coeff == nullptr) || (calibration_order == 0))
+	{
+		p_coeff = s_default_coeff;
+		m_calibration_order = s_default_order;
+	}
+
+	else
+	{
+		// Check pointer
+		if (p_calibration_coeff == nullptr)
+		{
+			Error_Handler();
+		}
+
+		p_coeff = p_calibration_coeff;
+
+		// Check order
+		if (calibration_order > max_order)
+		{
+			Error_Handler();
+		}
+	}
+
+	// TODO: see if we need to check this loop won't try to access elements past
+	// the array
+	// e.g. p_calibration_coeff points to array of size 3 and calibration_order
+	// is 3.
+	for (int i = 0; i <= m_calibration_order; i++)
+	{
+		m_calibration_coeff[i] = p_coeff[i];
+	}
 }
 
 

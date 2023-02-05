@@ -11,20 +11,19 @@
 #define CTHERMISTOR_H_
 
 #include "main.h"
+#include "CAdcData.h"
+
 extern uint16_t delayInMs;
 
 class CThermistor {
 public:
-	CThermistor(float *p_calibration_coeff = nullptr,
-            uint8_t calibration_order = 0);
+	CThermistor(uint8_t adc_channel, CAdcData *p_adc_handler);
 
-    float getTemperature(float voltage) const;
+    float getTemperature() const;
     void setLimits(float min_voltage, float max_voltage);
     void setCalibration(float *p_calibration_coeff = nullptr,
                         uint8_t calibration_order = 0);
 
-	void Init();
-	void ReadTemp();
 
 private:
 	static constexpr float min_volt_range = 0.57;
@@ -39,6 +38,9 @@ private:
     float m_max_volt_limit = max_volt_range;
     float m_calibration_coeff[max_order + 1];
     uint8_t m_calibration_order;
+
+    uint8_t m_adc_channel = 0;
+    CAdcData *mp_adc_handler;
 };
 
 #endif /* CTHERMISTOR_H_ */
