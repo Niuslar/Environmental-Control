@@ -23,10 +23,7 @@ etl::string<MAX_MESSAGE_SIZE> message;
 void CommsControllerInit()
 {
 	uart_2.init(&huart2);
-	uart_2.startRx();
-
-	uart_1.init(&huart1);
-	uart_1.startRx();
+	uart_1.init(&huart1, USART1_DE_GPIO_Port, USART1_DE_Pin);
 
 	message.append("Initialising: ");
 	message.append(uart_2.getName());
