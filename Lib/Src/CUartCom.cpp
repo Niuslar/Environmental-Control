@@ -74,6 +74,7 @@ bool CUartCom::init(UART_HandleTypeDef *p_huart,
                 sp_UART[s_uart_instances] = this;
                 s_uart_instances++;
                 b_success = true;
+                startRx();
             }
         }
     }
