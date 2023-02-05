@@ -7,14 +7,13 @@
 
 #include "main.h"
 #include "cmsis_os2.h"
+#include "SystemConfig.h"
 
 #ifdef __cplusplus
 extern "C"
 {
 #endif
 
-extern osMessageQueueId_t messagesOutHandle;
-extern osMessageQueueId_t commandsInHandle;
 
 void HumidityControllerInit()
 {

@@ -8,6 +8,7 @@
 #include "main.h"
 #include "CUartCom.h"
 #include "cmsis_os2.h"
+#include "SystemConfig.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -18,10 +19,6 @@ CUartCom uart_2("DebugComms");
 CUartCom uart_1("ControlComms");
 static constexpr int MAX_MESSAGE_SIZE = 50;
 etl::string<MAX_MESSAGE_SIZE> message;
-
-extern osMessageQueueId_t messagesOutHandle;
-extern osMessageQueueId_t commandsInHandle;
-extern osEventFlagsId_t commsInOutHandle;
 
 void CommsControllerInit()
 {
