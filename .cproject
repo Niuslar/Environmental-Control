@@ -36,6 +36,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/FreeRTOS/FreeRTOS-CLI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.1261653331" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -60,6 +62,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/FreeRTOS/FreeRTOS-CLI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1521421349" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -84,6 +88,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/FreeRTOS/FreeRTOS-CLI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.296672903" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
@@ -103,6 +109,77 @@
 							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.verilog.823043223" name="MCU Output Converter Verilog" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.verilog"/>
 							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.srec.486254420" name="MCU Output Converter Motorola S-rec" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.srec"/>
 							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec.1372582192" name="MCU Output Converter Motorola S-rec with symbols" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec"/>
+						</toolChain>
+					</folderInfo>
+					<folderInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1519933473.510269691" name="/" resourcePath="Middlewares">
+						<toolChain id="com.st.stm32cube.ide.mcu.gnu.managedbuild.toolchain.exe.debug.7246716" name="MCU ARM GCC" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.toolchain.exe.debug" unusedChildren="">
+							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.754100490.2090002205" name="MCU" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.754100490"/>
+							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.1224508050.558379822" name="CPU" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.1224508050"/>
+							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.301869121.216059223" name="Core" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.301869121"/>
+							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.2053375998.1253955466" name="Floating-point unit" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.2053375998"/>
+							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.426546166.282595478" name="Floating-point ABI" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.426546166"/>
+							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.1812148342.2010576229" name="Board" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.1812148342"/>
+							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.723601091.2043593120" name="Defaults" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.723601091"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.targetplatform" isAbstract="false" osList="all" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.targetplatform"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.228947360" name="MCU GCC Assembler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.227184524">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.option.includepaths.1265202013" name="Include paths (-I)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.option.includepaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/FreeRTOS/FreeRTOS-CLI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands}&quot;"/>
+								</option>
+								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.1038084495" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
+							</tool>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1587932016" name="MCU GCC Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.839215522">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.includepaths.437540918" name="Include paths (-I)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.includepaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="../Core/Inc"/>
+									<listOptionValue builtIn="false" value="../Drivers/STM32F4xx_HAL_Driver/Inc"/>
+									<listOptionValue builtIn="false" value="../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
+									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/include"/>
+									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"/>
+									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/FreeRTOS/FreeRTOS-CLI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands}&quot;"/>
+								</option>
+								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.650087543" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
+							</tool>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.579253328" name="MCU G++ Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.1816853673">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.includepaths.2135351856" name="Include paths (-I)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.includepaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="../Core/Inc"/>
+									<listOptionValue builtIn="false" value="../Drivers/STM32F4xx_HAL_Driver/Inc"/>
+									<listOptionValue builtIn="false" value="../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
+									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/include"/>
+									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"/>
+									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib/Inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/FreeRTOS/FreeRTOS-CLI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands}&quot;"/>
+								</option>
+								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1797619057" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
+							</tool>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.linker.701517856" name="MCU GCC Linker" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.linker.119747411"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.385468722" name="MCU G++ Linker" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.2047428747"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.archiver.1407618669" name="MCU GCC Archiver" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.archiver.1145560497"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.size.1468022650" name="MCU Size" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.size.1446774314"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objdump.listfile.2025471800" name="MCU Output Converter list file" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objdump.listfile.475809627"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.hex.1868901745" name="MCU Output Converter Hex" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.hex.1550414222"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.binary.1728882583" name="MCU Output Converter Binary" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.binary.1827490891"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.verilog.2123235827" name="MCU Output Converter Verilog" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.verilog.823043223"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.srec.1216077680" name="MCU Output Converter Motorola S-rec" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.srec.486254420"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec.398570804" name="MCU Output Converter Motorola S-rec with symbols" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec.1372582192"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
@@ -152,6 +229,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/etl}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/FreeRTOS/FreeRTOS-CLI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.1998070043" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
 							</tool>
@@ -178,6 +257,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/etl}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/FreeRTOS/FreeRTOS-CLI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.2117962936" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
 							</tool>
@@ -204,6 +285,8 @@
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/etl}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/FreeRTOS/FreeRTOS-CLI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands}&quot;"/>
 								</option>
 								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.107174020" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
 							</tool>
@@ -223,6 +306,86 @@
 							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.verilog.56080222" name="MCU Output Converter Verilog" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.verilog"/>
 							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.srec.1906475138" name="MCU Output Converter Motorola S-rec" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.srec"/>
 							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec.157907907" name="MCU Output Converter Motorola S-rec with symbols" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec"/>
+						</toolChain>
+					</folderInfo>
+					<folderInfo id="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.release.1469562700.321889762" name="/" resourcePath="Middlewares">
+						<toolChain id="com.st.stm32cube.ide.mcu.gnu.managedbuild.toolchain.exe.release.1613674057" name="MCU ARM GCC" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.toolchain.exe.release" unusedChildren="">
+							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.644070892.304048110" name="MCU" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_mcu.644070892"/>
+							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.1421623907.1901303074" name="CPU" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_cpuid.1421623907"/>
+							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.909192838.1993707521" name="Core" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_coreid.909192838"/>
+							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.471002060.754902102" name="Floating-point unit" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.fpu.471002060"/>
+							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.1205372412.1090832823" name="Floating-point ABI" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.floatabi.1205372412"/>
+							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.1956157801.342594046" name="Board" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.target_board.1956157801"/>
+							<option id="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.999168111.1915703845" name="Defaults" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.option.defaults.999168111"/>
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.targetplatform" isAbstract="false" osList="all" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.targetplatform"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.333841804" name="MCU GCC Assembler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.1082146106">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.option.includepaths.1055872214" name="Include paths (-I)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.option.includepaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/FreeRTOS/FreeRTOS-CLI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands}&quot;"/>
+								</option>
+								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input.1764016403" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.assembler.input"/>
+							</tool>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.2072487415" name="MCU GCC Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.577108056">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.includepaths.1547643986" name="Include paths (-I)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.option.includepaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="../Core/Inc"/>
+									<listOptionValue builtIn="false" value="../Drivers/STM32F4xx_HAL_Driver/Inc"/>
+									<listOptionValue builtIn="false" value="../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
+									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/include"/>
+									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"/>
+									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/FreeRTOS/FreeRTOS-CLI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands}&quot;"/>
+								</option>
+								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1352790937" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c"/>
+							</tool>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.1512391138" name="MCU G++ Compiler" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.714994150">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.includepaths.305701796" name="Include paths (-I)" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.option.includepaths" valueType="includePath">
+									<listOptionValue builtIn="false" value="../Core/Inc"/>
+									<listOptionValue builtIn="false" value="../Drivers/STM32F4xx_HAL_Driver/Inc"/>
+									<listOptionValue builtIn="false" value="../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"/>
+									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+									<listOptionValue builtIn="false" value="../Drivers/CMSIS/Include"/>
+									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/include"/>
+									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2"/>
+									<listOptionValue builtIn="false" value="../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Controllers}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Lib}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/etl}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands/Inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Middlewares/Third_Party/FreeRTOS/FreeRTOS-CLI}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/Environmental-Control/Commands}&quot;"/>
+								</option>
+								<inputType id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp.1753968762" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.compiler.input.cpp"/>
+							</tool>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.linker.1447909515" name="MCU GCC Linker" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.linker.688069473"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.353647093" name="MCU G++ Linker" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.1680755082"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.archiver.440218809" name="MCU GCC Archiver" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.archiver.1830935651"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.size.33749855" name="MCU Size" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.size.1772371217"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objdump.listfile.1333348204" name="MCU Output Converter list file" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objdump.listfile.1699952730"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.hex.1641218300" name="MCU Output Converter Hex" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.hex.472547590"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.binary.1478416916" name="MCU Output Converter Binary" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.binary.1953766421"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.verilog.2117318468" name="MCU Output Converter Verilog" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.verilog.56080222"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.srec.884589912" name="MCU Output Converter Motorola S-rec" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.srec.1906475138"/>
+							<tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec.1902548723" name="MCU Output Converter Motorola S-rec with symbols" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.objcopy.symbolsrec.157907907"/>
 						</toolChain>
 					</folderInfo>
 					<sourceEntries>
