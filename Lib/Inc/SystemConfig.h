@@ -9,11 +9,14 @@
 #ifndef SYTEMCONFIG_H_
 #define SYTEMCONFIG_H_
 
+#include "main.h"
+#include "cmsis_os2.h"
+
 /* CMSIS-RTOS variables found in freertos.c */
 extern osMessageQueueId_t messagesOutHandle;
 extern osMessageQueueId_t commandsInHandle;
 extern osEventFlagsId_t commsInOutHandle;
-
+extern osEventFlagsId_t tempControlFlagsHandle;
 /* ------------------------------------------*/
 
 #define TEMP_CHANNELS_COUNT 8

@@ -11,7 +11,6 @@
 #include "FreeRTOS.h"
 #include "FreeRTOS_CLI.h"
 
-
 void RegisterCommands();
 
 /* List of registered commands */

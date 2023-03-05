@@ -90,6 +90,11 @@ osEventFlagsId_t commsInOutHandle;
 const osEventFlagsAttr_t commsInOut_attributes = {
   .name = "commsInOut"
 };
+/* Definitions for tempControlFlags */
+osEventFlagsId_t tempControlFlagsHandle;
+const osEventFlagsAttr_t tempControlFlags_attributes = {
+  .name = "tempControlFlags"
+};
 
 /* Private function prototypes -----------------------------------------------*/
 /* USER CODE BEGIN FunctionPrototypes */
@@ -165,6 +170,9 @@ void MX_FREERTOS_Init(void) {
   /* Create the event(s) */
   /* creation of commsInOut */
   commsInOutHandle = osEventFlagsNew(&commsInOut_attributes);
+
+  /* creation of tempControlFlags */
+  tempControlFlagsHandle = osEventFlagsNew(&tempControlFlags_attributes);
 
   /* USER CODE BEGIN RTOS_EVENTS */
   /* add events, ... */

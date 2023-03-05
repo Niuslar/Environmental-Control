@@ -11,9 +11,6 @@
 #include "SystemConfig.h"
 #include "Commands-CLI.h"
 
-#define MAX_OUTPUT_LENGTH 100
-#define MAX_INPUT_LENGTH  50
-
 #ifdef __cplusplus
 extern "C"
 {
@@ -26,8 +23,9 @@ etl::string<MAX_MESSAGE_SIZE> message;
 
 void CommsControllerInit()
 {
+	/* Initialise debug and control comms (UART) */
 	uart_2.init(&huart2);
-	uart_1.init(&huart1, USART1_DE_GPIO_Port, USART1_DE_Pin);
+	uart_1.init(&huart1, USART1_DE_GPIO_Port, USART1_DE_Pin); //RS485
 
 	message.append("Initialising: ");
 	message.append(uart_2.getName());
@@ -69,7 +67,7 @@ void CommsControllerRun()
 		commandIn.append(uart_2.getData());
 		do
 		{
-			xMoreDataToFollow = FreeRTOS_CLIProcessCommand(commandIn.c_str(), outputBuf, MAX_OUTPUT_LENGTH);
+			xMoreDataToFollow = FreeRTOS_CLIProcessCommand(commandIn.c_str(), outputBuf, MAX_MESSAGE_SIZE);
 			uart_2.send((uint8_t*)outputBuf, strlen(outputBuf));
 		}while(xMoreDataToFollow != pdFALSE);
 //		osMessageQueuePut(commandsInHandle, &commandIn, 1, 100);
@@ -77,6 +75,7 @@ void CommsControllerRun()
 		commandIn.clear();
 	}
 }
+
 
 #ifdef __cplusplus
 }
