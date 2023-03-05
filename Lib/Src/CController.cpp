@@ -24,13 +24,3 @@ CController::~CController()
 {
     // Destruction of CController will trigger error handler in CTaskBase.
 }
-
-void CController::run()
-{
-    while (true)
-    {
-        processControl();
-        processCommand();
-        osDelayUntil(m_run_period);
-    }
-}

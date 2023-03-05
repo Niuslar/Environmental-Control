@@ -25,16 +25,7 @@ public:
                 osPriority_t priority);
     virtual ~CController();
 
-    virtual void run();
-
-    const osMessageQueueId_t getCommandQueue() const
-    {
-        return (m_command_queue);
-    }
-
-protected:
-    virtual void processCommand() = 0;
-    virtual void processControl() = 0;
+    virtual void run() = 0;
 
 private:
     // TODO: does each controller own the command or do we have one queue
