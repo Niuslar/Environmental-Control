@@ -29,11 +29,31 @@ bool CTaskBase::start()
     attributes.priority = m_priority;
     attributes.stack_size = m_stack_depth;
     m_id = osThreadNew(taskRunner, this, &attributes);
+    return (m_id != NULL);
 }
 
-void CTaskBase::taskRunner(void *p_param)
+#if (configUSE_OS2_THREAD_SUSPEND_RESUME == 1)
+void CTaskBase::suspend()
+{
+    if (m_id != NULL)
+    {
+        osThreadSuspend(m_id);
+    }
+}
+
+void CTaskBase::resume()
+{
+    if (m_id != NULL)
+    {
+        osThreadResume(m_id);
+    }
+}
+#endif
+
+__attribute((noreturn)) void CTaskBase::taskRunner(void *p_param)
 {
     CTaskBase *p_task = static_cast<CTaskBase *>(p_param);
     p_task->run();
+    // Code execution should never get to this point.
     // TODO: ErrorHanlder("Task returned from runner unexpectedly.");
 }
