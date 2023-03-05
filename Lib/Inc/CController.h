@@ -8,9 +8,13 @@
 #ifndef CCONTROLLER_H_
 #define CCONTROLLER_H_
 
-#include "CTaskBase.h"
 #include "CMessage.h"
+#include "CTaskBase.h"
 #include "cmsis_os2.h"
+
+#if (INCLUDE_vTaskDelayUntil == 0)
+#    error INCLUDE_vTaskDelayUntil must be defined as 1
+#endif
 
 class CController : public CTaskBase
 {
