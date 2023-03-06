@@ -55,8 +55,8 @@
 void SystemClock_Config(void);
 void MX_FREERTOS_Init(void);
 /* USER CODE BEGIN PFP */
-void initialiseHardware();
-void startControllers();
+extern void initialiseHardware();
+extern void startControllers();
 
 /* USER CODE END PFP */
 
