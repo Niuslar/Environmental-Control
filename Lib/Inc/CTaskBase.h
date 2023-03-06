@@ -29,7 +29,7 @@ public:
      * kernel will crash. If task no longer needed, it must be deleted using
      * proper FreeRTOS API.
      */
-    virtual void run() = 0;
+    __attribute((noreturn)) virtual void run() = 0;
 
     /**
      * @fn bool start()
