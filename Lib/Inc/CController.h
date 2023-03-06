@@ -27,11 +27,10 @@ public:
 
     virtual void run() = 0;
 
-private:
+protected:
     // TODO: does each controller own the command or do we have one queue
     // and each controller has to peek the command.
     uint32_t m_run_period;
-    osMessageQueueId_t m_command_queue;
 };
 
 #endif /* CCONTROLLER_H_ */
