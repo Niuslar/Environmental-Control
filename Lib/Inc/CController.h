@@ -8,7 +8,6 @@
 #ifndef CCONTROLLER_H_
 #define CCONTROLLER_H_
 
-#include "CMessage.h"
 #include "CTaskBase.h"
 #include "cmsis_os2.h"
 
