@@ -9,6 +9,7 @@
  */
 
 #include "CUartCom.h"
+#include "cmsis_os.h"
 
 CUartCom *CUartCom::sp_UART[MAX_UART_ENGINES] = {nullptr};
 uint8_t CUartCom::s_uart_instances = 0;
@@ -209,8 +210,10 @@ void CUartCom::uartRxHandler(UART_HandleTypeDef *p_huart)
                 send("Error: Buffer overflow -> RX Queue\n");
             }
         }
-        // TODO: here needs to be a command to notify comms controller that new
-        // data is ready for processing.
+        if (mp_notify_task != nullptr)
+        {
+            osThreadFlagsSet(mp_notify_task, m_notify_flag);
+        }
     }
 
     HAL_UART_Receive_IT(p_huart, &m_rx_char, 1);

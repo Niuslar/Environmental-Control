@@ -53,6 +53,7 @@ uint32_t CCommandController::registerComChannel(IComChannel *p_com_channel)
         mp_registered_channels[m_com_channel_counter] = p_com_channel;
         m_com_channel_counter++;
         channel_flag = 1 << m_com_channel_counter;
+        p_com_channel->registerTask(this, channel_flag);
         m_com_channel_flags |= channel_flag;
     }
     return channel_flag;
