@@ -75,10 +75,10 @@ void Error_Handler(void);
 #define TEMPERATURE_1_GPIO_Port GPIOA
 #define TEMPERATURE_2_Pin GPIO_PIN_1
 #define TEMPERATURE_2_GPIO_Port GPIOA
-#define USART_TX_Pin GPIO_PIN_2
-#define USART_TX_GPIO_Port GPIOA
-#define USART_RX_Pin GPIO_PIN_3
-#define USART_RX_GPIO_Port GPIOA
+#define USART2_TX_Pin GPIO_PIN_2
+#define USART2_TX_GPIO_Port GPIOA
+#define USART2_RX_Pin GPIO_PIN_3
+#define USART2_RX_GPIO_Port GPIOA
 #define TEMPERATURE_3_Pin GPIO_PIN_4
 #define TEMPERATURE_3_GPIO_Port GPIOA
 #define BREATHING_Pin GPIO_PIN_5
