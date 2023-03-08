@@ -105,7 +105,7 @@ void CUartCom::stopRx()
 bool CUartCom::send(etl::string<MAX_STRING_SIZE> msg)
 {
     uint32_t msg_len = msg.length();
-    bool b_success = send((uint8_t *)msg.c_str(), msg_len);
+    bool b_success = send(msg.c_str(), msg_len);
     return b_success;
 }
 
@@ -115,7 +115,7 @@ bool CUartCom::send(etl::string<MAX_STRING_SIZE> msg)
  * @param len Size of data that needs to be stored
  * @return True if data was added to the queue, false in case of buffer overflow
  */
-bool CUartCom::send(uint8_t *p_data_buf, uint32_t len)
+bool CUartCom::send(char const *p_data_buf, uint32_t len)
 {
     bool b_success = true;
 

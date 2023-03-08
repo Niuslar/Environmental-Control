@@ -82,8 +82,7 @@ void CCommandController::processChannel(IComChannel *p_channel)
         more_data = FreeRTOS_CLIProcessCommand(m_active_command.c_str(),
                                                m_response,
                                                MAX_STRING_SIZE);
-        uint8_t* pointer = static_cast<uint8_t *>(m_response);
-        p_channel->send(static_cast<uint8_t *>(&(m_response[0])), strlen(m_response));
+        p_channel->send(m_response, strlen(m_response));
     } while (more_data != pdFALSE);
     /*
      * Clear the channel notification once all traffic has been dealt with.

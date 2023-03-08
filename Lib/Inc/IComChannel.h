@@ -28,7 +28,7 @@ public:
     virtual bool isDataAvailable() = 0;
     virtual etl::string<MAX_STRING_SIZE> getData() = 0;
     virtual bool send(etl::string<MAX_STRING_SIZE> message) = 0;
-    virtual bool send(uint8_t *p_data_buf, uint32_t len) = 0;
+    virtual bool send(char const *p_data_buf, uint32_t len) = 0;
 
 private:
     etl::string<MAX_STRING_SIZE> const m_name;

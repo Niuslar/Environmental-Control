@@ -36,7 +36,7 @@ public:
 
     void startRx();
     bool send(const etl::string<MAX_STRING_SIZE> msg);
-    bool send(uint8_t *p_data_buf, uint32_t len);
+    bool send(char const *p_data_buf, uint32_t len);
     bool isDataAvailable();
     etl::string<MAX_STRING_SIZE> getData();
     void uartRxHandler(UART_HandleTypeDef *p_huart);
@@ -68,7 +68,7 @@ private:
     uint8_t m_tx_msg_length = 0;
     uint8_t m_rx_char;
     CFIFOBuffer<etl::string<MAX_STRING_SIZE>, MAX_RX_QUEUE_SIZE> m_rx_queue;
-    CFIFOBuffer<uint8_t, MAX_TX_QUEUE_SIZE> m_tx_queue;
+    CFIFOBuffer<char, MAX_TX_QUEUE_SIZE> m_tx_queue;
 };
 
 #endif /* CUARTCOM_H_ */
