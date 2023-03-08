@@ -209,6 +209,8 @@ void CUartCom::uartRxHandler(UART_HandleTypeDef *p_huart)
                 send("Error: Buffer overflow -> RX Queue\n");
             }
         }
+        // TODO: here needs to be a command to notify comms controller that new
+        // data is ready for processing.
     }
 
     HAL_UART_Receive_IT(p_huart, &m_rx_char, 1);
