@@ -13,25 +13,23 @@
 #include "main.h"
 extern uint16_t delayInMs;
 
-class CThermistor {
+class CThermistor
+{
 public:
-	CThermistor(float *p_calibration_coeff = nullptr,
-            uint8_t calibration_order = 0);
+    CThermistor(float *p_calibration_coeff = nullptr,
+                uint8_t calibration_order = 0);
 
     float getTemperature(float voltage) const;
     void setLimits(float min_voltage, float max_voltage);
     void setCalibration(float *p_calibration_coeff = nullptr,
                         uint8_t calibration_order = 0);
 
-	void Init();
-	void ReadTemp();
-
 private:
-	static constexpr float min_volt_range = 0.57;
-	static constexpr float max_volt_range = 2.67;
-	static constexpr int max_order  = 5;
+    static constexpr float min_volt_range = 0.57;
+    static constexpr float max_volt_range = 2.67;
+    static constexpr int max_order = 5;
 
-	static constexpr float out_of_range = 999.9;
+    static constexpr float out_of_range = 999.9;
     static const float s_default_coeff[];
     static const uint8_t s_default_order;
 

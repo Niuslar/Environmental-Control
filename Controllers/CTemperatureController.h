@@ -28,6 +28,8 @@ public:
     static BaseType_t requestTemperature(char *pcWriteBuffer,
                                          size_t xWriteBufferLen,
                                          const char *pcCommandString);
+
+private:
 };
 
 #endif /* CTEMPERATURECONTROLLER_H_ */

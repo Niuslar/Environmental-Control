@@ -7,13 +7,58 @@
 
 #include <CRealHardwareMap.h>
 
+/**
+ * @note All of these parameters are subject to PCB design layout. Refer to
+ * specific PCB this code will run on for correct information on what
+ * peripherals are being used.
+ */
+#define V_REF 5.0
+
+#define EVAPORATOR_T_CHANNEL    8
+#define INPUT_VOLTAGE_CHANNEL   9
+#define TOTAL_CURRENT_CHANNEL   10
+#define CONTROL_CURRENT_CHANNEL 11
+#define AMBIENT_TEMP_CHANNEL    12
+
+#define INPUT_VOLTAGE_SCALE   ((28.0 + 3.01) / 3.01)  // voltage divider on PCB
+#define TOTAL_CURRENT_SCALE   (750E-6 * 200)  // 750uOhm resistor 200x amplifier
+#define CONTROL_CURRENT_SCALE (750E-6 * 200)
+#define AD22100_SCALE         ((V_REF / 5.0) * (1 / 22.5E-3))
+#define AD22100_OFFSET        ((V_REF / 5.0) * (-1.375 / 22.5E-3))
+
+/* This section maps generic names of the pins to something that makes sense.
+ * We'll do it this way for now until hardware configuration settles down at
+ * which point the pin names will be renamed. */
+#define EVAPORATOR_GPIO_Port ENABLE_8_GPIO_Port
+#define EVAPORATOR_Pin       ENABLE_8_Pin
+
+const CRealHardwareMap::timer_init_map_t CRealHardwareMap::s_timer_init_map[] =
+    {{&htim1, TIM_CHANNEL_1},
+     {&htim4, TIM_CHANNEL_1},
+     {&htim2, TIM_CHANNEL_2},
+     {&htim1, TIM_CHANNEL_4},
+     {&htim3, TIM_CHANNEL_1},
+     {&htim3, TIM_CHANNEL_2},
+     {&htim3, TIM_CHANNEL_3},
+     {&htim3, TIM_CHANNEL_4}};
+
+const CRealHardwareMap::gpio_init_map_t CRealHardwareMap::s_gpio_init_map[] = {
+    {PWM_1_GPIO_Port, PWM_1_Pin},
+    {PWM_2_GPIO_Port, PWM_2_Pin},
+    {PWM_3_GPIO_Port, PWM_3_Pin},
+    {PWM_4_GPIO_Port, PWM_4_Pin},
+    {PWM_5_GPIO_Port, PWM_5_Pin},
+    {PWM_6_GPIO_Port, PWM_6_Pin},
+    {PWM_7_GPIO_Port, PWM_7_Pin},
+    {PWM_8_GPIO_Port, PWM_8_Pin}};
+
 CRealHardwareMap::CRealHardwareMap(
     uint32_t run_period,
     const etl::string<configMAX_TASK_NAME_LEN> name,
     uint32_t stack_depth,
     osPriority_t priority)
     : CController(run_period, name, stack_depth, priority),
-      IHardwareMap()
+      m_adc(&hadc1)
 {
 }
 
@@ -32,7 +77,7 @@ void CRealHardwareMap::run()
     {
         // TODO: this is where all data acquisition is happening. The other
         // methods are for accessing acquired data.
-        osThreadDelay(m_run_period);
+        osDelayUntil(m_run_period);
     }
 }
 
