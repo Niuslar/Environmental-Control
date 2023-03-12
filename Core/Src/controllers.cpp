@@ -8,11 +8,14 @@
 #include "CCO2Controller.h"
 #include "CCommandController.h"
 #include "CHumidityController.h"
+#include "CRealHardwareMap.h"
 #include "CTemperatureController.h"
 #include "CUartCom.h"
 #include "main.h"
 
 // Instantiate all classes
+CRealHardwareMap g_hw(10, "hardware map", 4092, osPriorityAboveNormal);
+
 CTemperatureController g_temperature_controller(100,
                                                 "temperature",
                                                 4092,
@@ -35,15 +38,20 @@ extern "C"
 
     void initialiseHardware()
     {
+        g_hw.init();
         g_main_coms.init(&huart1, USART1_DE_GPIO_Port, USART1_DE_Pin);
         g_debug_coms.init(&huart2);
         g_command_controller.registerComChannel(&g_main_coms);
         g_command_controller.registerComChannel(&g_debug_coms);
-        // TODO: the IComChannel needs to be told which task to notify.
+
+        g_temperature_controller.registerHwMap(&g_hw);
+        g_humidity_controller.registerHwMap(&g_hw);
+        g_co2_controller.registerHwMap(&g_hw);
     }
 
     void startControllers()
     {
+        g_hw.start();
         g_temperature_controller.start();
         g_humidity_controller.start();
         g_co2_controller.start();

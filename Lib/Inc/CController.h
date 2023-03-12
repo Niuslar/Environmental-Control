@@ -9,6 +9,7 @@
 #define CCONTROLLER_H_
 
 #include "CTaskBase.h"
+#include "IHardwareMap.h"
 #include "cmsis_os2.h"
 
 #if (INCLUDE_vTaskDelayUntil == 0)
@@ -26,10 +27,16 @@ public:
 
     virtual void run() = 0;
 
+    void registerHwMap(IHardwareMap *p_map)
+    {
+        mp_hw = p_map;
+    }
+
 protected:
     // TODO: does each controller own the command or do we have one queue
     // and each controller has to peek the command.
     uint32_t m_run_period;
+    IHardwareMap *mp_hw;
 };
 
 #endif /* CCONTROLLER_H_ */

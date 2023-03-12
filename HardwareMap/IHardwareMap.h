@@ -15,7 +15,6 @@
 
 #include "stdint.h"
 
-#define HARD_PWM_OUTPUTS 8
 /**
  * @note Declare this value to the number of soft PWM outputs that are needed.
  */
@@ -24,6 +23,9 @@
 class IHardwareMap
 {
 public:
+    static const uint8_t HARD_PWM_OUTPUTS = 8;
+    static const uint8_t ADC_THEMISTOR_CHANNELS = 8;
+
     virtual void init() = 0;
     /**
      * @note Any type of access that is required by the controllers to the

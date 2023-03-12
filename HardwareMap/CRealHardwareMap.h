@@ -21,7 +21,7 @@
 #include "main.h"
 #include "tim.h"
 
-class CRealHardwareMap : public CController, IHardwareMap
+class CRealHardwareMap : public CController, public IHardwareMap
 {
 public:
     CRealHardwareMap(uint32_t run_period,
