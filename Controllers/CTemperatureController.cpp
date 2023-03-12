@@ -19,6 +19,12 @@ static constexpr CLI_Command_Definition_t get_temperature{
     help,
     &(CTemperatureController::requestTemperature)};
 
+static constexpr float CALIB_COEFF[] = {-5.16917E-13,
+                                        1.70585E-09,
+                                        5.82242E-06,
+                                        -0.059851305,
+                                        180.289278};
+
 CTemperatureController::CTemperatureController(
     uint32_t run_period,
     const etl::string<configMAX_TASK_NAME_LEN> name,
@@ -26,6 +32,12 @@ CTemperatureController::CTemperatureController(
     osPriority_t priority)
     : CController(run_period, name, stack_depth, priority)
 {
+    for (uint8_t i = 0; i < CHANNEL_COUNT; i++)
+    {
+        m_sensor[i].setCalibration(CALIB_COEFF, 4);
+        m_control[i].reset();
+    }
+
     FreeRTOS_CLIRegisterCommand(&get_temperature);
 }
 
@@ -38,9 +50,14 @@ void CTemperatureController::run()
 {
     while (true)
     {
-        /*
-         * Code to execute on every iteration of the controller goes here.
-         */
+        float temperature;
+        float power;
+        for (uint8_t i = 0; i < CHANNEL_COUNT; i++)
+        {
+            temperature = m_sensor[i].getTemperature(mp_hw->getChannelTemp(i));
+            power = m_control[i].run(m_target[i], temperature);
+            mp_hw->setHardPwmOutput(power, i);
+        }
         osDelayUntil(m_run_period);
     }
 }
