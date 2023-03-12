@@ -93,7 +93,7 @@ float CThermistor::getTemperature(float voltage) const
     return temp_celsius;
 }
 
-void CThermistor::setCalibration(float *p_calibration_coeff,
+void CThermistor::setCalibration(float const *p_calibration_coeff,
                                  uint8_t calibration_order)
 {
     // Check input

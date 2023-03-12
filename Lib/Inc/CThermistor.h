@@ -21,7 +21,7 @@ public:
 
     float getTemperature(float voltage) const;
     void setLimits(float min_voltage, float max_voltage);
-    void setCalibration(float *p_calibration_coeff = nullptr,
+    void setCalibration(float const *p_calibration_coeff = nullptr,
                         uint8_t calibration_order = 0);
 
 private:
