@@ -27,7 +27,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "FreeRTOS.h"
+#include "task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,7 +54,7 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-
+extern void startControllers();
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -101,6 +102,11 @@ int main(void)
   MX_TIM11_Init();
   MX_USART1_UART_Init();
   /* USER CODE BEGIN 2 */
+  startControllers();
+
+  vTaskStartScheduler();
+
+
 
   /* USER CODE END 2 */
 
