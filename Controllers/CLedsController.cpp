@@ -14,7 +14,6 @@ CLedsController::CLedsController(
 				UBaseType_t priority)
 		    : CController(run_period, name, stack_depth, priority)
 {
-	// TODO Auto-generated constructor stub
 
 }
 
@@ -24,6 +23,7 @@ void CLedsController::run()
 
     while (true)
     {
+    	// Set BREATHING LED PWM
     	m_led_duty += (m_led_direction*m_led_speed);
 
     	if(m_led_duty >= 100)
@@ -45,8 +45,29 @@ void CLedsController::run()
     	__HAL_TIM_SET_COMPARE(m_htim, m_channel, pulse);
 
     	vTaskDelay(m_run_period_override); //Ignore m_run_period variable set by user
-
-    	//TODO: Add events to change the speed of the LED
     }
+}
+
+/**
+ * @brief Set system error level to change the LED speed.
+ * The error levels are defined in main.h and are of the type:
+ * SYSTEM_OK,
+ * SYSTEM_WARNING,
+ * SYSTEM_ERROR
+ */
+void CLedsController::setLevel(error_types_t error)
+{
+	switch(error)
+	{
+	case SYSTEM_ERROR:
+		m_led_speed = LED_SPEED_VERY_HIGH;
+		break;
+	case SYSTEM_WARNING:
+		m_led_speed = LED_SPEED_HIGH;
+		break;
+	case SYSTEM_OK:
+	default:
+		m_led_speed = LED_SPEED_NORMAL;
+	}
 }
 

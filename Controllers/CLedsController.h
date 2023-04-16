@@ -20,8 +20,18 @@ public:
 
 	virtual void run();
 
+	void setLevel(error_types_t error);
+
 private:
-	uint32_t m_led_speed = 3; // This will determine how fast the LED turns on/off. 3 is a "soothing" speed.
+
+	enum
+	{
+		LED_SPEED_NORMAL = 3,
+		LED_SPEED_HIGH = 10,
+		LED_SPEED_VERY_HIGH = 50
+	};
+
+	uint32_t m_led_speed = LED_SPEED_NORMAL;
 	int32_t m_led_duty = 0;
 	int8_t m_led_direction = 1; // Set to 1 if the LED is turning on, -1 if off.
 

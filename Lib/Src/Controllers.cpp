@@ -39,6 +39,11 @@ extern "C"
         g_leds_controller.start();
     }
 
+    void setErrorLevel(error_types_t error_level)
+    {
+    	g_leds_controller.setLevel(error_level);
+    }
+
 #ifdef __cplusplus
 }
 #endif

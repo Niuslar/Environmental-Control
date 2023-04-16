@@ -18,9 +18,7 @@ CTaskBase::CTaskBase(const etl::string<configMAX_TASK_NAME_LEN> name,
 
 CTaskBase::~CTaskBase()
 {
-	// Stop task and delete it
-	vTaskSuspend(m_task_handle);
-	vTaskDelete(m_task_handle);
+	setErrorLevel(SYSTEM_ERROR);
 }
 
 bool CTaskBase::start()
