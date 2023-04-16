@@ -54,6 +54,15 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 
+typedef enum
+{
+	SYSTEM_OK,
+	SYSTEM_WARNING,
+	SYSTEM_ERROR
+}error_types_t;
+
+extern void setErrorLevel(error_types_t error_level);
+
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
